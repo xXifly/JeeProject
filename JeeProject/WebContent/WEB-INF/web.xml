@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+	id="WebApp_ID" version="3.1">
+
+	<jsp-config>
+		<jsp-property-group>
+			<url-pattern>*.jsp</url-pattern>
+			<include-prelude>/WEB-INF/conf.jsp</include-prelude>
+		</jsp-property-group>
+	</jsp-config>
+
+	<servlet>
+		<servlet-name>ClientForm</servlet-name>
+		<servlet-class>servlets.ClientForm</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>ClientDisplay</servlet-name>
+		<servlet-class>servlets.ClientDisplay</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>OrderForm</servlet-name>
+		<servlet-class>servlets.OrderForm</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>OrderDisplay</servlet-name>
+		<servlet-class>servlets.OrderDisplay</servlet-class>
+	</servlet>
+
+
+	<servlet-mapping>
+		<servlet-name>ClientForm</servlet-name>
+		<url-pattern>/clientform</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ClientDisplay</servlet-name>
+		<url-pattern>/clientdisplay</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>OrderForm</servlet-name>
+		<url-pattern>/orderform</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>OrderDisplay</servlet-name>
+		<url-pattern>/orderdisplay</url-pattern>
+	</servlet-mapping>
+
+
+</web-app>
